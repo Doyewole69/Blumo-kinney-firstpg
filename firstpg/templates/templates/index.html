@@ -1,0 +1,177 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/waitingpage.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script rel="stylesheet" src="https://kit.fontawesome.com/93ea3eb3cc.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <section class="first-section">
+        <nav class="navbar">
+            <!-- LOGO -->
+            <div class="logo">
+                <a href="index.html"><img src="{% static 'images/logo.png' %}" alt="logo"></a>
+            </div>
+
+            <!-- NAVIGATION MENU -->
+            <ul class="nav-links">
+
+                <!-- NAVIGATION MENUS -->
+                <div class="menu">
+
+                    <li><a href="pg_error.html">Services</a></li>
+
+                    <div class="about-dropdown">
+                        <li class="dropbtn" onclick="myFunction()">About</li>
+
+                        <!-- DROPDOWN MENU -->
+                        <ul class="dropdown" id="myDropdown">
+                            <li><a href="pg_error.html">About us</a></li>
+                            <li><a href="pg_error.html">Meet the team</a></li>
+                            <li><a href="pg_error.html">How to use B&K services</a></li>
+                        </ul>
+                    </div>
+
+                    <li><a href="contact.html">Contact</a></li>
+                </div>
+            </ul>
+        </nav>
+
+        <div class="intro-section">
+            <div class="intro-section-left">
+                <p>"Home help service <span> coming to your space...</span>"</p>
+                <h1>BLUMO & KINNEY</h1>
+                <button>Join our waiting list</button>
+            </div>
+            <div class="intro-section-right">
+                <img src="{% static 'images/MacBook Pro 16.png' %}" alt="Laptop">
+            </div>
+
+        </div>
+    </section>
+    <section class="second-section">
+        <div class="line"></div>
+        <img src="{% static 'images/social icons.svg' %}" alt="Facebook-icon">
+        <img src="{% static 'images/Google Plus Squared.png' %}" alt="Google-icon">
+        <img src="{% static 'images/Instagram.png' %}" alt="Instagram-icon">
+        <img src="{% static 'images/Whatsapp.png' %}" alt="Whatsapp-icon">
+        <img src="{% static 'images/Twitter.png' %}" alt="Twitter-icon">
+        <div class="line"></div>
+    </section>
+    <section class="third-section">
+        <div class="third-section-left">
+            <div class="phone-circl"></div>
+            <img src="{% static 'images/iPhone 13.png' %}" alt="icons">
+
+        </div>
+        <div class="third-section-right">
+            <div>
+                <h1>Welcome to Blumo & Kinney Home Help Service Agency</h1>
+                <p>
+                    Your trusted partner in providing comprehensive home assistance solutions. We understand the demands of modern life and the challenges individuals and families face in managing their households. That's why we're here to offer professional and reliable
+                    support to make your life easier and more comfortable.
+                </p>
+            </div>
+            <div>
+                <h1>Mission Statement</h1>
+                <p>
+                    To provide an exceptional and top notch public service that meet the needs of our customers for standard safe space service.
+                </p>
+                <h1>Vision Statement</h1>
+                <p>
+                    To be a top class and standard safe space service agency that connects professionals and customers to bringing comfort to their safe space.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="fourth-section">
+        <div class="fourth-section-left">
+            <p>
+                Rest assured that <span>capable and trustworthy individuals</span> are <span>available 
+                to handle your concerns</span>. Effortlessly <span>find the nearest skilled Artisan 
+                in your vicinity with a single tap</span>.
+            </p>
+        </div>
+        <div class="fourth-section-right">
+            <div class="phone-circl"></div>
+            <img src="{% static 'images/iPhone 13 - black.png' %}" alt="icons">
+        </div>
+    </section>
+    <section class="fifth-section">
+        <div>
+            <h4>Join Our Waiting List</h4>
+            <p>
+                Join our community of skilled artisans and experience the satisfaction of being a valued customer today.
+            </p>
+            <a href="artisans-page.html"><button>Join Now</button></a>
+        </div>
+
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h1>Informations</h1>
+                    <ul>
+                        <li><a href="pg_error.html">Pricing</a></li>
+                        <li><a href="pg_error.html">FAQ</a></li>
+                        <li><a href="pg_error.html">Sponsors</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h1>Contact Us</h1>
+                    <ul>
+                        <li><a href="pg_error.html"><i class="fa-brands fa-facebook" style="color: #3e74d0;"></i>blumokinney</a></li>
+                        <li><a href="pg_error.html"><i class="fa-brands fa-google-plus" style="color: #c9263f;"></i>blumokinney@gmail.com</a></li>
+                        <li><a href="pg_error.html"><i class="fa-brands fa-instagram" style="color: #b84c28;"></i>@blumo_kinney1</a></li>
+                        <li><a href="pg_error.html"><i class="fa-brands fa-whatsapp" style="color: #3b9929;"></i>+2347025192459</a></li>
+                        <li><a href="pg_error.html"><i class="fa-brands fa-twitter" style="color: #417ce1;"></i>@blumokinney</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h1>Company</h1>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Terms of service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Security</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h1>Developer</h1>
+                    <ul>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Core API Reference</a></li>
+                        <li><a href="#">Zipper</a></li>
+                        <li><a href="#">Webhooks</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="sponsor-col">
+            <h1>Sponsors</h1>
+            <div class="sponsor">
+                <a href="#"><img src="{% static 'images/Access bank.png' %}" alt="Access"></a>
+                <a href="#"><img src="{% static 'images/Jumia.png' %}" alt="Jumia"></a>
+                <a href="#"><img src="{% static 'images/GTBank.png' %}" alt="GTBank"></a>
+                <a href="#"><img src="{% static 'images/UBA.png' %}" alt="UBA"></a>
+            </div>
+        </div>
+        <div class="last-text">
+            <p><small>&copy; Copyright 2018 BlumoKinney.com. All rights reserved.</small></p>
+        </div>
+    </footer>
+    <script src="{% static 'js/waitingpage.js' %}"></script>
+</body>
+
+</html>
