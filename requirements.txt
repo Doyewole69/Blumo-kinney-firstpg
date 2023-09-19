@@ -1,0 +1,2 @@
+django-phonenumber-field[phonenumberslite]==8.13.20
+pillow==10.0.1
