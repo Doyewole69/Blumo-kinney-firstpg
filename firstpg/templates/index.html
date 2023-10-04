@@ -12,7 +12,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script rel="stylesheet" src="https://kit.fontawesome.com/93ea3eb3cc.js" crossorigin="anonymous"></script>
-    <title>Document</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'images/logo.png' %}">
+    <title>B & K</title>
 </head>
 
 <body>
@@ -51,10 +52,14 @@
             <div class="intro-section-left">
                 <p>"Home help service <span> coming to your space...</span>"</p>
                 <h1>BLUMO & KINNEY</h1>
-                <button>Join our waiting list</button>
+    
+
+                <button >Join our waiting list</button>
+
+            
             </div>
             <div class="intro-section-right">
-                <img src="{% static 'images/MacBook Pro 16.png' %}" alt="Laptop">
+                <img src="{% static 'images/MacBook_Pro_16.png' %}" alt="Laptop">
             </div>
 
         </div>
@@ -113,7 +118,7 @@
             <p>
                 Join our community of skilled artisans and experience the satisfaction of being a valued customer today.
             </p>
-            <a href="artisans-page.html"><button>Join Now</button></a>
+            <a href="{% url 'user_registration' %}"><button>Join Now</button></a>
         </div>
 
     </section>

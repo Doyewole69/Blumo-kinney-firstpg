@@ -182,6 +182,11 @@ li {
     cursor: pointer;
 }
 
+.intro-section-left button a {
+    text-decoration: none;
+    color: #FFF;
+}
+
 .intro-section-right {
     width: 30%;
 }
@@ -217,7 +222,7 @@ li {
 
 /* artisans-section */
 
-.left h1 {
+.left-section h1 {
     color: #000;
     text-align: center;
     font-family: Montserrat;
@@ -225,10 +230,11 @@ li {
     font-style: normal;
     font-weight: 500;
     line-height: normal;
-    padding: 5%;
+    width: 200px;
+    margin: 5% auto;
 }
 
-.left h3 {
+.left-section h3 {
     color: #000;
     text-align: center;
     font-family: Montserrat;
@@ -236,10 +242,11 @@ li {
     font-style: normal;
     font-weight: 500;
     line-height: normal;
-    padding: 3% 6%;
+    width: 270px;
+    margin: 3% auto;
 }
 
-.left h3 span {
+.left-section h3 span {
     background: linear-gradient(91deg, #6F1971 67.41%, #000 80.28%);
     background-clip: text;
     -webkit-background-clip: text;
@@ -257,14 +264,13 @@ li {
 }
 
 input {
-    border-radius: 2px;
+    border-radius: 5px;
     border: 1px solid rgba(0, 0, 0, 0.20);
 }
 
 .artisans-form label {
     font-size: 10px;
     font-weight: 500;
-    margin: 15px 0;
 }
 
 .artisans-form .text {
@@ -279,6 +285,7 @@ input {
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+    margin-bottom: 5px;
 }
 
 .artisans-form p span {
@@ -288,19 +295,35 @@ input {
 .artisans-form input {
     width: 90%;
     height: 25px;
-    border-radius: 3px;
+    border-radius: 5px;
     padding: 2px 5px;
     margin: 5px 0;
     font-size: 10px;
 }
 
+.artisans-form select {
+    width: 90%;
+    height: 25px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.20);
+    margin: 5px 0;
+    font-size: 8px;
+}
+
 .artisans-form input[type="button"] {
-    width: 80px;
+    width: 30%;
     height: 25px;
     padding: 2px 5px;
     font-size: 8px;
     background: #6F1971;
     color: white;
+    display: block;
+    margin: auto;
+}
+
+.artisans-form input[type="button"]:hover {
+    background: #4f1250;
+    cursor: pointer;
 }
 
 
@@ -314,7 +337,7 @@ input {
 .text {
     background: white;
     border-radius: 5px;
-    padding: 15% 5%;
+    padding: 10% 5%;
 }
 
 .top {
@@ -359,6 +382,7 @@ input {
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+    margin: 0;
     margin-bottom: 35px;
 }
 
@@ -366,7 +390,7 @@ input {
 /* buttom-part */
 
 .buttom-part {
-    margin: 20px 0 50px;
+    margin: 20px 0 30px;
     border-radius: 5px;
     display: flex;
     background: #fff;
@@ -378,7 +402,7 @@ input {
     flex-direction: column;
     align-items: flex-start;
     gap: 3px;
-    padding: 20px 0 10px 10px;
+    margin: 5% 0 5% 5%;
 }
 
 .buttom-part-left h1 {
@@ -387,7 +411,7 @@ input {
     font-family: Montserrat;
     font-size: 10px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 700;
     line-height: normal;
     padding-bottom: 5px;
 }
@@ -396,7 +420,7 @@ input {
     padding: 0;
     color: #000;
     font-family: Montserrat;
-    font-size: 6px;
+    font-size: 8px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -405,23 +429,14 @@ input {
 
 .buttom-part-right {
     width: 50%;
-    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .buttom-part-right img {
     width: 100%;
     height: auto;
-    z-index: 1;
-    position: relative;
-}
-
-.buttom-part-right .phone-circle {
-    width: 534px;
-    height: 528px;
-    border-radius: 534px;
-    border: 50px solid #FFF;
-    position: absolute;
-    bottom: 2%;
 }
 
 
@@ -439,12 +454,12 @@ input {
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    margin: 15px 0;
+    margin: 10px auto;
 }
 
 .newsletter h1,
-p {
-    margin-left: 10px;
+.newsletter p {
+    margin-left: 5%;
 }
 
 .newsletter h1 {
@@ -475,17 +490,21 @@ p {
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    padding: 10px 30px;
+    padding: 3% 15%;
     border-radius: 5px;
     background: #6F1971;
     color: #FFF;
     font-size: 10px;
-    margin-left: 10px;
-    margin-bottom: 10px;
+    margin: 3%;
 }
 
 .newsletter button span {
     color: rgba(255, 255, 255, 0.60);
+}
+
+.newsletter button:hover {
+    background: #4f1250;
+    cursor: pointer;
 }
 
 
@@ -715,6 +734,51 @@ ul {
         width: 23px;
         height: 23px;
     }
+    /* artisans-section */
+    .artisans-section {
+        display: flex;
+    }
+    /* left-section */
+    .left-section {
+        width: 50%;
+    }
+    .artisans-form label {
+        font-size: 12px;
+        margin: 30px 0;
+    }
+    .artisans-form p {
+        margin-bottom: 15px;
+    }
+    .artisans-form input {
+        width: 90%;
+        height: 30px;
+        border-radius: 5px;
+        padding: 2px 5px;
+        margin: 5px 0 15px;
+        font-size: 10px;
+    }
+    .artisans-form select {
+        width: 90%;
+        height: 30px;
+        border-radius: 5px;
+        margin: 5px 0 15px;
+    }
+    .artisans-form input[type="button"] {
+        height: 30px;
+        padding: 2px 5px;
+        font-size: 10px;
+    }
+    /* right-section */
+    .right-section {
+        width: 50%;
+    }
+    .join {
+        padding: 3% 3%;
+    }
+    .benefits p {
+        font-size: 10px;
+        margin-bottom: 15px;
+    }
     /* footer */
     .footer {
         padding-left: 50px;
@@ -780,6 +844,63 @@ ul {
         width: 25px;
         height: 25px;
     }
+    /* artisans-section */
+    /* left-section */
+    .left-section {
+        width: 60%;
+    }
+    .left-section h1 {
+        font-size: 20px;
+        width: 270px;
+    }
+    .left-section h3 {
+        font-size: 14px;
+        width: 400px;
+    }
+    .left-section h3 span {
+        font-size: 20px;
+    }
+    .artisans-form label {
+        font-size: 16px;
+        margin: 30px 0;
+    }
+    .artisans-form p {
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
+    .artisans-form input {
+        height: 35px;
+        border-radius: 5px;
+        padding: 3px 10px;
+        margin: 5px 0 20px;
+        font-size: 14px;
+    }
+    .artisans-form select {
+        width: 90%;
+        height: 35px;
+        border-radius: 5px;
+        padding: 3px 10px;
+        margin: 5px 0 20px;
+        font-size: 14px;
+    }
+    .artisans-form input[type="button"] {
+        height: 35px;
+        font-size: 14px;
+    }
+    /* newsletter */
+    .newsletter h3 {
+        font-size: 14px;
+    }
+    .newsletter h1 {
+        font-size: 18px;
+    }
+    .newsletter p {
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+    .newsletter button {
+        font-size: 12px;
+    }
 }
 
 @media(min-width: 1024px) {
@@ -826,6 +947,61 @@ ul {
         margin: 10px 25px;
         width: 35px;
         height: 35px;
+    }
+    /* arstisans-section */
+    .left-section h1 {
+        font-size: 28px;
+        width: 350px;
+    }
+    .left-section h3 {
+        font-size: 18px;
+        width: 500px;
+    }
+    .left-section h3 span {
+        font-size: 28px;
+    }
+    .artisans-form label {
+        font-size: 18px;
+    }
+    .artisans-form p {
+        font-size: 14px;
+        margin-bottom: 25px;
+    }
+    .artisans-form input,
+    .artisans-form select,
+    .artisans-form input[type="button"] {
+        height: 40px;
+        font-size: 14px;
+        margin-top: 10px;
+        margin-bottom: 25px;
+    }
+    /* right-section */
+    .benefits h3 {
+        font-size: 16px;
+    }
+    .benefits p {
+        font-size: 12px;
+        margin-bottom: 25px;
+    }
+    .buttom-part-left h1 {
+        font-size: 12px;
+    }
+    .buttom-part-left p {
+        font-size: 10px;
+    }
+    /* newsletter */
+    .newsletter h3 {
+        font-size: 16px;
+    }
+    .newsletter h1 {
+        font-size: 20px;
+    }
+    .newsletter p {
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+    .newsletter button {
+        font-size: 14px;
     }
     /* footer */
     .footer-col {
@@ -890,6 +1066,67 @@ ul {
         margin: 15px 40px;
         width: 50px;
         height: 50px;
+    }
+    /* arstisans-section */
+    .left-section h1 {
+        font-size: 40px;
+        width: 500px;
+    }
+    .left-section h3 {
+        font-size: 24px;
+        width: 700px;
+    }
+    .left-section h3 span {
+        font-size: 40px;
+    }
+    .artisans-form label {
+        font-size: 24px;
+    }
+    .artisans-form p {
+        font-size: 18px;
+        margin-bottom: 25px;
+    }
+    .artisans-form input,
+    .artisans-form select,
+    .artisans-form input[type="button"] {
+        height: 50px;
+        font-size: 20px;
+        margin-top: 10px;
+        margin-bottom: 25px;
+    }
+    /* right-section */
+    .join {
+        padding: 8% 3%;
+    }
+    .benefits h3 {
+        font-size: 18px;
+    }
+    .benefits p {
+        font-size: 15px;
+        margin-bottom: 35px;
+    }
+    .buttom-part-left h1 {
+        font-size: 14px;
+        padding-bottom: 10px;
+    }
+    .buttom-part-left p {
+        font-size: 12px;
+        padding-bottom: 15px;
+    }
+    /* newsletter */
+    .newsletter h3 {
+        font-size: 20px;
+        margin: 25px auto;
+    }
+    .newsletter h1 {
+        font-size: 24px;
+    }
+    .newsletter p {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    .newsletter button {
+        font-size: 18px;
     }
     /* footer */
     .footer-col {

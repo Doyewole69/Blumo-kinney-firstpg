@@ -17,6 +17,7 @@ class Artisan(models.Model):
     address = models.CharField(max_length=225, blank=False)
     landmark = models.CharField(max_length=25, )
     prefered_location = models.CharField(max_length=225)
+    guarantor_fullname = models.CharField(max_length=225)
     guarantor_phone_number = PhoneNumberField(max_length=13, unique=True, blank=False)
     artisan_passport = models.ImageField(upload_to = 'static/images/')
     guarantor_passport = models.ImageField(upload_to = 'static/images/')
