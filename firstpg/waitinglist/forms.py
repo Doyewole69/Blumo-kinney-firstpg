@@ -1,6 +1,6 @@
 from django import forms
 from django.conf import settings
-from .models import Artisan
+from .models import Artisan, ContactMessage
 from .constants import GENDER_CHOICE, SERVICES_RENDERED
 
 class ArtisanForm(forms.ModelForm):
@@ -29,3 +29,17 @@ class ArtisanForm(forms.ModelForm):
         
         def __init__(self, *args, **kwargs):
             super().__init__(*args, **kwargs)
+            
+            
+class ContactForm(forms.ModelForm):
+    
+    class Meta:
+        model = ContactMessage
+        fields = [
+            'first_name',
+            'last_name',
+            'email',
+            'phone_number',
+            'service_needed',
+            'special_request',
+        ]

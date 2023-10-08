@@ -1,0 +1,207 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "css/contact.css" %} ">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/93ea3eb3cc.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon" href="{% static 'images/logo.png' %}">
+
+    <title>Contact Us</title>
+</head>
+<body>
+    <section class="first-section">
+        <nav class="navbar">
+
+            <!-- NAVIGATION MENU -->
+            <ul class="nav-links">
+        
+            <!-- NAVIGATION MENUS -->
+            <div class="menu">
+        
+                <li><a href="{% url "waitinglist:error_page" %}">Services</a></li>
+                
+                <div class="about-dropdown">
+                <li class="dropbtn" onclick="myFunction()">About</li>
+        
+                <!-- DROPDOWN MENU -->
+                <ul class="dropdown" id="myDropdown">
+                    <li><a href="{% url "waitinglist:error_page" %}">About us</a></li>
+                    <li><a href="{% url "waitinglist:error_page" %}">Meet the team</a></li>
+                    <li><a href="{% url "waitinglist:error_page" %}">How to use B&K services</a></li>
+                </ul>
+                </div>  
+                
+                <li><a href="{% url "waitinglist:contactus" %}">Contact</a></li>
+            </div>
+            </ul>
+            
+            <!-- LOGIN & SIGN UP -->
+            <ul>
+                <div  class="menu" id="reg">
+                    <li><a href="#">Log In</a></li>
+                    <li><a href="{% url 'waitinglist:add' %}">Sign Up</a></li>
+                </div>
+            </ul>
+        
+
+        </nav>
+    
+        <div class="intro-section">
+            <div class="intro-section-left">
+                <div class="logo"><a href="{% url "home" %}"><img src="{% static "images/logo.png" %} " alt="logo"></a></div>
+                <p>“we are passionate about your safe space<span></span></span>”</p>
+                <h1>BLUMO & KINNEY</h1>
+                <button>Services</button>
+            </div>
+            <div class="intro-section-right">
+                <div class="icon">
+                    <img src="{% static "images/search.svg" %}" alt="search icon">
+                    <img src="{% static "images/cart.png" %}" alt="cart icon">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="contact-form-section">
+        <h1>HOW CAN WE HELP YOU?</h1>
+        <form method="POST" class="artisans-form" enctype="multipart/form-data">
+            {% csrf_token %}
+            <p>
+                <label for="id_first_name">First name:</label><br>
+                <input type="text" name="first_name" maxlength="100" required id="id_first_name">
+                
+                
+              </p>
+            
+              
+              <p>
+                <label for="id_last_name">Last name:</label><br>
+                <input type="text" name="last_name" maxlength="100" required id="id_last_name">
+                
+                
+              </p>
+            
+              
+              <p>
+                <label for="id_email">Email:</label><br>
+                <input type="email" name="email" maxlength="254" required id="id_email">
+                
+                
+              </p>
+            
+              
+              <p>
+                <label for="id_phone_number">Phone number:</label><br>
+                <input type="tel" name="phone_number" maxlength="14" placeholder="+2348000000000" required id="id_phone_number">
+                
+                
+              </p>
+            
+              
+              <p>
+                <label for="id_service_needed">Service needed:</label><br>
+                <input type="text" name="service_needed" maxlength="200" required id="id_service_needed">
+                
+                
+              </p>
+            
+              
+              <p>
+                <label for="id_special_request">Special request:</label><br>
+                <textarea name="special_request" cols="40" rows="10" maxlength="1500" required id="id_special_request">
+            </textarea>
+                
+                
+                  
+                
+              </p>
+
+           <input type="submit" value="Save" class="default" name="_save">
+        </form>
+    </section>
+    <section class="contact-details">
+        <div class="contact-details-text">
+            <h2>Call Us</h2>
+            <p>24/7 standby</p>
+            <p>+234 702-5192-459</p>
+            <h2>Chat With Us</h2>
+            <p>+234 702-5192-459</p>
+        </div>
+        <div class="contact-details-img"><img src="{% static "images/customer care.png" %}"   alt="image"></div>
+    </section>
+    <section class="location-section">
+        <div class="location-section-left"><img src=" {% static "images/map.png" %}" alt="image"></div>
+        <div class="location-section-right">
+            <div class="text">
+                <h2>Location</h2>
+                <p>Yaba, Mainland</p>
+                <p>22 Onitunere St, Iwaya 101245, Ikeja, Nigeria</p>
+            </div>
+            <div class="img"><img src="{% static "images/recruiter.png" %} " alt="image"></div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h1>Informations</h1>
+                    <ul>
+                        <li><a href="{% url "waitinglist:error_page" %}">Pricing</a></li>
+                        <li><a href="{% url "waitinglist:error_page" %}">FAQ</a></li>
+                        <li><a href="{% url "waitinglist:error_page" %}">Sponsors</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h1>Contact Us</h1>
+                    <ul>
+                        <li><a href="{% url "waitinglist:error_page" %}"><i class="fa-brands fa-facebook" style="color: #3e74d0;"></i>blumokinney</a></li>
+                        <li><a href="{% url "waitinglist:error_page" %}"><i class="fa-brands fa-google-plus" style="color: #c9263f;"></i>blumokinney@gmail.com</a></li>
+                        <li><a href="{% url "waitinglist:error_page" %}"><i class="fa-brands fa-instagram" style="color: #b84c28;"></i>@blumo_kinney1</a></li>
+                        <li><a href="{% url "waitinglist:error_page" %}"><i class="fa-brands fa-whatsapp" style="color: #3b9929;"></i>+2347025192459</a></li>
+                        <li><a href="{% url "waitinglist:error_page" %}"><i class="fa-brands fa-twitter" style="color: #417ce1;"></i>@blumokinney</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h1>Company</h1>
+                    <ul>
+                        <li><a href="{% url "waitinglist:contactus" %}">Contact Us</a></li>
+                        <li><a href="#">Terms of service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Security</a></li>
+                        </ul>
+                </div>
+                <div class="footer-col">
+                    <h1>Developer</h1>
+                    <ul>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Core API Reference</a></li>
+                        <li><a href="#">Zipper</a></li>
+                        <li><a href="#">Webhooks</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="sponsor-col">
+            <h1>Sponsors</h1>
+            <div class="sponsor">
+                <a href="#"><img src="{% static 'images/Access bank.png' %}" alt="Access"></a>
+                <a href="#"><img src="{% static 'images/Jumia.png' %}" alt="Jumia"></a>
+                <a href="#"><img src="{% static 'images/GTBank.png' %}" alt="GTBank"></a>
+                <a href="#"><img src="{% static 'images/UBA.png' %}" alt="UBA"></a>
+            </div>
+        </div>
+        <div class="last-text">
+            <p><small>&copy; Copyright 2018 BlumoKinney.com. All rights reserved.</small></p>
+        </div>
+   </footer>
+   <script src="waitingPage.js"></script>
+</body>
+</html>

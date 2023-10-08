@@ -13,12 +13,12 @@ class Artisan(models.Model):
     services = models.CharField(max_length=30, choices=SERVICES_RENDERED)
     skills = models.CharField(max_length=30, choices=SERVICES_RENDERED)
     unlisted_skill = models.CharField(max_length=225)
-    phone_number = PhoneNumberField(max_length=13, unique=True, blank=False)
+    phone_number = models.IntegerField(unique=True, blank=False)
     address = models.CharField(max_length=225, blank=False)
     landmark = models.CharField(max_length=25, )
     prefered_location = models.CharField(max_length=225)
     guarantor_fullname = models.CharField(max_length=225)
-    guarantor_phone_number = PhoneNumberField(max_length=13, unique=True, blank=False)
+    guarantor_phone_number = models.IntegerField(unique=True, blank=False)
     artisan_passport = models.ImageField(upload_to = 'static/images/')
     guarantor_passport = models.ImageField(upload_to = 'static/images/')
     
@@ -26,3 +26,16 @@ class Artisan(models.Model):
         return self.email
     
     
+    
+    
+class ContactMessage(models.Model):
+    first_name = models.CharField(max_length=100)
+    last_name = models.CharField(max_length=100)
+    email = models.EmailField()
+    phone_number =models.IntegerField(blank=False)
+    service_needed = models.CharField(max_length=200)
+    special_request = models.TextField(max_length=1500)
+    timestamp = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.service_needed

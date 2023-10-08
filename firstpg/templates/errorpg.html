@@ -73,55 +73,24 @@
         <img src="{% static 'images/Twitter.png' %}" alt="Twitter-icon">
         <div class="line"></div>
     </section>
-    <section class="third-section">
-        <div class="third-section-left">
-            <div class="phone-circl"></div>
-            <img src="{% static 'images/iPhone 13.png' %}" alt="icons">
-
-        </div>
-        <div class="third-section-right">
-            <div>
-                <h1>Welcome to Blumo & Kinney Home Help Service Agency</h1>
-                <p>
-                    Your trusted partner in providing comprehensive home assistance solutions. We understand the demands of modern life and the challenges individuals and families face in managing their households. That's why we're here to offer professional and reliable
-                    support to make your life easier and more comfortable.
-                </p>
-            </div>
-            <div>
-                <h1>Mission Statement</h1>
-                <p>
-                    To provide an exceptional and top notch public service that meet the needs of our customers for standard safe space service.
-                </p>
-                <h1>Vision Statement</h1>
-                <p>
-                    To be a top class and standard safe space service agency that connects professionals and customers to bringing comfort to their safe space.
-                </p>
-            </div>
-        </div>
-    </section>
-    <section class="fourth-section">
-        <div class="fourth-section-left">
-            <p>
-                Rest assured that <span>capable and trustworthy individuals</span> are <span>available 
-                to handle your concerns</span>. Effortlessly <span>find the nearest skilled Artisan 
-                in your vicinity with a single tap</span>.
-            </p>
-        </div>
-        <div class="fourth-section-right">
-            <div class="phone-circl"></div>
-            <img src="{% static 'images/iPhone 13 - black.png' %}" alt="icons">
-        </div>
-    </section>
-    <section class="fifth-section">
-        <div>
-            <h4>Join Our Waiting List</h4>
-            <p>
-                Join our community of skilled artisans and experience the satisfaction of being a valued customer today.
-            </p>
-            <a href="{% url 'waitinglist:add' %}"><button>Join Now</button></a>
+    <section class="Error">
+        <div class="error-image">
+            <img src="{% static "images/Under Construction.png" %} " alt="icon">
         </div>
 
-    </section>
+        <div class="text"><p>PAGE UNDER CONSTRUCTION</p></div>
+</section>
+<section class="fifth-section">
+    <div>
+        <h4>Join Our Waiting List</h4>
+        <p>
+            Join our community of skilled artisans and experience 
+            the satisfaction of being a valued customer today.
+        </p>
+        <button><a href="{% url "waitinglist:add" %}">Join Now</a></button>
+    </div>
+
+</section>
     <footer class="footer">
         <div class="container">
             <div class="row">

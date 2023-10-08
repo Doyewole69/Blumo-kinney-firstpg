@@ -26,16 +26,16 @@
             <!-- NAVIGATION MENUS -->
             <div class="menu">
         
-                <li><a href="pg_error.html">Services</a></li>
+                <li><a href="{% url "waitinglist:error_page" %}">Services</a></li>
                 
                 <div class="about-dropdown">
                 <li class="dropbtn" onclick="myFunction()">About</li>
         
                 <!-- DROPDOWN MENU -->
                 <ul class="dropdown" id="myDropdown">
-                    <li><a href="pg_error.html">About us</a></li>
-                    <li><a href="pg_error.html">Meet the team</a></li>
-                    <li><a href="pg_error.html">How to use B&K services</a></li>
+                    <li><a href="{% url "waitinglist:error_page" %}">About us</a></li>
+                    <li><a href="{% url "waitinglist:error_page" %}">Meet the team</a></li>
+                    <li><a href="{% url "waitinglist:error_page" %}">How to use B&K services</a></li>
                 </ul>
                 </div>  
                 
@@ -169,7 +169,7 @@
                   
                   <p>
                     <label for="id_phone_number">Phone number:</label><br>
-                    <input type="tel" name="phone_number" maxlength="13" required id="id_phone_number">
+                    <input type="tel" name="phone_number" maxlength="14" placeholder="+2348000000000" required id="id_phone_number">
                     
                     
                   </p>
@@ -209,7 +209,7 @@
                   
                   <p>
                     <label for="id_guarantor_phone_number">Guarantor phone number:</label><br>
-                    <input type="tel" name="guarantor_phone_number" maxlength="13" required id="id_guarantor_phone_number">
+                    <input type="tel" name="guarantor_phone_number" maxlength="14" placeholder="+2348000000000" required id="id_guarantor_phone_number">
                     
                     
                   </p>
@@ -336,19 +336,19 @@
                 <div class="footer-col">
                     <h1>Informations</h1>
                     <ul>
-                        <li><a href="pg_error.html">Pricing</a></li>
-                        <li><a href="pg_error.html">FAQ</a></li>
-                        <li><a href="pg_error.html">Sponsors</a></li>
+                        <li><a href="{% url "waitinglist:error_page" %}">Pricing</a></li>
+                        <li><a href="{% url "waitinglist:error_page" %}">FAQ</a></li>
+                        <li><a href="{% url "waitinglist:error_page" %}">Sponsors</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h1>Contact Us</h1>
                     <ul>
-                        <li><a href="pg_error.html"><i class="fa-brands fa-facebook" style="color: #3e74d0;"></i>blumokinney</a></li>
-                        <li><a href="pg_error.html"><i class="fa-brands fa-google-plus" style="color: #c9263f;"></i>blumokinney@gmail.com</a></li>
-                        <li><a href="pg_error.html"><i class="fa-brands fa-instagram" style="color: #b84c28;"></i>@blumo_kinney1</a></li>
-                        <li><a href="pg_error.html"><i class="fa-brands fa-whatsapp" style="color: #3b9929;"></i>+2347025192459</a></li>
-                        <li><a href="pg_error.html"><i class="fa-brands fa-twitter" style="color: #417ce1;"></i>@blumokinney</a></li>
+                        <li><a href="{% url "waitinglist:error_page" %}"><i class="fa-brands fa-facebook" style="color: #3e74d0;"></i>blumokinney</a></li>
+                        <li><a href="{% url "waitinglist:error_page" %}"><i class="fa-brands fa-google-plus" style="color: #c9263f;"></i>blumokinney@gmail.com</a></li>
+                        <li><a href="{% url "waitinglist:error_page" %}"><i class="fa-brands fa-instagram" style="color: #b84c28;"></i>@blumo_kinney1</a></li>
+                        <li><a href="{% url "waitinglist:error_page" %}"><i class="fa-brands fa-whatsapp" style="color: #3b9929;"></i>+2347025192459</a></li>
+                        <li><a href="{% url "waitinglist:error_page" %}"><i class="fa-brands fa-twitter" style="color: #417ce1;"></i>@blumokinney</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">

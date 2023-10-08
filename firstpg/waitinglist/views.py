@@ -2,7 +2,8 @@ from django.shortcuts import render, redirect
 from django.views.generic import TemplateView
 from django.urls import reverse_lazy
 from .forms import ArtisanForm
-from .models import Artisan
+from .models import Artisan, ContactMessage
+from .forms import ContactForm
 
 class HomeView(TemplateView):
     template_name = 'index.html'
@@ -26,3 +27,19 @@ def ArtisanRegistrationView(request):
     }
     template = 'artisanspage.html'
     return render(request, template, context)
+
+def ContactusRegistrationView(request):
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+            # You can add a success message or redirect to a thank you page here
+            return redirect('home')  # Replace 'thank_you' with the actual URL name
+    else:
+        form = ContactForm()
+    
+    return render(request, 'contact.html', {'form': form})
+
+
+def errorpg(request):
+    return render(request, "errorpg.html", {})

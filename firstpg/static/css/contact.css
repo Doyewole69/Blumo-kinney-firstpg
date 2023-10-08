@@ -20,7 +20,7 @@ li {
 /*Testing*/
 
 .first-section {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("static/images/parlour-img.png");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/images/parlour-img.png");
     background-size: cover;
     background-repeat: no-repeat;
     animation: switch 1.5s infinite alternate;
@@ -33,10 +33,10 @@ li {
 
 @keyframes switch {
     from {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("static/images/parlour-img.png");
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/images/parlour-img.png");
     }
     to {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("static/images/parlour-img.png");
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/images/parlour-img.png");
     }
 }
 
