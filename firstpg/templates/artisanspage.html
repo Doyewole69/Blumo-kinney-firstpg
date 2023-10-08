@@ -15,11 +15,375 @@
     <title>B & K</title>
 </head>
 <body>
-    <form method="POST" action="" class="artisans-form">
-        {% csrf_token %}
-        {{form.as_p }}
+    <section class="first-section">
+        <nav class="navbar">
+            <!-- LOGO -->
+            <div class="logo"><a href="{% url 'home' %}"><img src="{% static 'images/logo.png' %}" alt="logo"></a></div>
+        
+            <!-- NAVIGATION MENU -->
+            <ul class="nav-links">
+        
+            <!-- NAVIGATION MENUS -->
+            <div class="menu">
+        
+                <li><a href="pg_error.html">Services</a></li>
+                
+                <div class="about-dropdown">
+                <li class="dropbtn" onclick="myFunction()">About</li>
+        
+                <!-- DROPDOWN MENU -->
+                <ul class="dropdown" id="myDropdown">
+                    <li><a href="pg_error.html">About us</a></li>
+                    <li><a href="pg_error.html">Meet the team</a></li>
+                    <li><a href="pg_error.html">How to use B&K services</a></li>
+                </ul>
+                </div>  
+                
+                <li><a href="contact.html">Contact</a></li>
+            </div>
+            </ul>
+        </nav>
+    
+        <div class="intro-section">
+            <div class="intro-section-left">
+                <p>"Home help service <span> coming to your space...</span></span>"</p>
+                <h1>BLUMO & KINNEY</h1>
+                <button><a href="artisans-page.html">Join our waiting list</a></button>
+            </div>
+            <div class="intro-section-right">
+                <img src="{% static 'images/MacBook_Pro_16.png' %}" alt="Laptop">
+            </div>
 
-        <input type="submit" value="Save" class="default" name="_save">
-    </form>
+        </div>
+    </section>
+    <section class="second-section">
+        <div class="line"></div>
+        <img src="{% static 'images/social icons.svg' %}" alt="Facebook-icon">
+        <img src="{% static 'images/Google Plus Squared.png' %}" alt="Google-icon">
+        <img src="{% static 'images/Instagram.png' %}" alt="Instagram-icon">
+        <img src="{% static 'images/Whatsapp.png' %}" alt="Whatsapp-icon">
+        <img src="{% static 'images/Twitter.png' %}" alt="Twitter-icon">
+        <div class="line"></div>
+    </section>
+
+
+    <!-- Artisans Design -->
+
+    <section class="artisans-section">
+        <div class="left-section">
+            <h1>Join Our Community of Skilled Artisans</h1>
+            <h3>Join our community of skilled <span>ARTISANS</span> and experience the satisfaction of being a valued worker</h3>
+
+            <form method="POST" class="artisans-form" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="name">
+                    <label for="id_first_name">First name:</label><br>
+                    <input type="text" name="first_name" maxlength="25" required id="id_first_name">
+                    
+                    
+                  </p>
+                
+                  
+                  <p>
+                    <label for="id_last_name">Last name:</label><br>
+                    <input type="text" name="last_name" maxlength="25" required id="id_last_name">
+                    
+                    
+                  </p>
+                
+                  
+                  <p>
+                    <label for="id_gender">Gender:</label><br>
+                    <select name="gender" required id="id_gender">
+                  <option value="" selected>---------</option>
+                
+                  <option value="M">Male</option>
+                
+                  <option value="F">Female</option>
+                
+                  <option value="O">Others</option>
+                
+                </select>
+                    
+                    
+                  </p>
+                
+                  
+                  <p>
+                    <label for="id_email">Email:</label><br>
+                    <input type="email" name="email" maxlength="254" required id="id_email">
+                    
+                    
+                  </p>
+                
+                  
+                  <p>
+                    <label for="id_company_name">Company name:</label><br>
+                    <input type="text" name="company_name" maxlength="225" required id="id_company_name">
+                    
+                    
+                  </p>
+                
+                  
+                  <p>
+                    <label for="id_services">Services:</label><br>
+                    <select name="services" required id="id_services">
+                  <option value="" selected>---------</option>
+                
+                  <option value="Carpentry">Carpentry</option>
+                
+                  <option value="Electrician">Electrician</option>
+                
+                  <option value="O">Others</option>
+                
+                </select>
+                    
+                    
+                  </p>
+                
+                  
+                  <p>
+                    <label for="id_skills">Skills:</label><br>
+                    <select name="skills" required id="id_skills">
+                  <option value="" selected>---------</option>
+                
+                  <option value="Carpentry">Carpentry</option>
+                
+                  <option value="Electrician">Electrician</option>
+                
+                  <option value="O">Others</option>
+                
+                </select>
+                    
+                    
+                  </p>
+                
+                  
+                  <p>
+                    <label for="id_unlisted_skill">Unlisted skill:</label><br>
+                    <input type="text" name="unlisted_skill" maxlength="225" required id="id_unlisted_skill">
+                    
+                    
+                  </p>
+                
+                  
+                  <p>
+                    <label for="id_phone_number">Phone number:</label><br>
+                    <input type="tel" name="phone_number" maxlength="13" required id="id_phone_number">
+                    
+                    
+                  </p>
+                
+                  
+                  <p>
+                    <label for="id_address">Address:</label><br>
+                    <input type="text" name="address" maxlength="225" required id="id_address">
+                    
+                    
+                  </p>
+                
+                  
+                  <p>
+                    <label for="id_landmark">Landmark:</label><br>
+                    <input type="text" name="landmark" maxlength="25" required id="id_landmark">
+                    
+                    
+                  </p>
+                
+                  
+                  <p>
+                    <label for="id_prefered_location">Prefered location:</label><br>
+                    <input type="text" name="prefered_location" maxlength="225" required id="id_prefered_location">
+                    
+                    
+                  </p>
+                
+                  
+                  <p>
+                    <label for="id_guarantor_fullname">Guarantor fullname:</label><br>
+                    <input type="text" name="guarantor_fullname" maxlength="225" required id="id_guarantor_fullname">
+                    
+                    
+                  </p>
+                
+                  
+                  <p>
+                    <label for="id_guarantor_phone_number">Guarantor phone number:</label><br>
+                    <input type="tel" name="guarantor_phone_number" maxlength="13" required id="id_guarantor_phone_number">
+                    
+                    
+                  </p>
+                
+                  
+                  <p>
+                    <label for="id_artisan_passport">Artisan passport:</label><br>
+                    <input type="file" name="artisan_passport" accept="image/*" required id="id_artisan_passport">
+                    
+                    
+                  </p>
+                
+                  
+                  <p>
+                    <label for="id_guarantor_passport">Guarantor passport:</label><br>
+                    <input type="file" name="guarantor_passport" accept="image/*" required id="id_guarantor_passport">
+                    
+                    
+                      
+                    
+                  </p>
+
+                <input type="submit" value="Save" class="default" name="_save">
+            </form>
+
+        </div>
+    </div>
+        <div class="right-section">
+            <div class="join">
+                <div class="text">
+                    <div class="top">
+                        <div class="image">
+                            <img src="{% static "images/girl working online.png" %}" alt="Icons">
+                        </div>
+                        
+                        <h1>Sign up And Get:</h1>
+                    </div>
+                    <div class="benefits">
+                        <h3>Networking Opportunities</h3>
+                        <p>
+                            Joining our community of Artisans and we will 
+                            provide you with the chance to connect with like-minded individuals, 
+                            share ideas, and collaborate on projects.
+                        </p>
+
+                        <h3>Platform Exposure</h3>
+                        <p>
+                            Being part of Blumo and Kinney's community will grant you visibility on 
+                            her platform, potentially leading to increased exposure for your work 
+                            and attracting potential clients and customers
+                        </p>
+
+                        <h3>Access to Resources</h3>
+                        <p>
+                            The agency will offer resources such as tools, materials, and educational 
+                            materials to support artisans in their crafts.
+                        </p>
+
+                        <h3>Collaboration Opportunities</h3>
+                        <p>
+                            The agency will facilitate collaborations among artisans, enabling you to 
+                            work with others to create unique and innovative projects.
+                        </p>
+
+                        <h3>Marketing and Promotion</h3>
+                        <p>
+                            Being affiliated with Blumo and Kinney may involve exposure through their 
+                            marketing efforts, which could help you reach a wider audience and generate 
+                            more business opportunities.
+                        </p>
+                    </div>
+
+                </div>
+                <div class="buttom-part">
+                    <div class="buttom-part-left">
+
+                        <h1>Welcome to Blumo & Kinney Home Help Service Agency</h1>
+                        <p>
+                            Your trusted partner in providing comprehensive home assistance solutions. 
+                            We understand the demands of modern life and the challenges individuals and
+                            families face in managing their households. That's why we're here to offer 
+                            professional and reliable support to make your life easier and more comfortable.
+                        </p>
+
+                        <h1>Mission Statement</h1>
+                        <p>
+                            To provide an exceptional and top notch public service
+                            that meet the needs of our customers for standard safe 
+                            space service.
+                        </p>
+                        <h1>Vision Statement</h1>
+                        <p>
+                            To be a top class and standard safe space service agency
+                            that connects professionals and customers to bringing 
+                            comfort to their safe space.
+                        </p>
+                    </div>
+                    <div class="buttom-part-right"><img src="Images/iPhone 13.png" alt=""></div>
+                </div>
+            </div>
+            <div class="newsletter">
+                <h3>INCREDIBLY POWERFUL NEWSLETTER</h3>
+                <h1>Discover the Secrets to Keeping Your Kitchen Utensils Sparkling and Clean!</h1>
+                <div class="newsletter-text">
+                    <p>
+                        Dear subscriber, Welcome to our latest newsletter, where we will share some valuable 
+                        tips and tricks to help you keep your kitchen utensils sparkling and clean. 
+                    </p>
+                    <p>
+                        A well-maintained set of kitchen tools not only enhances the cooking experience 
+                        but also ensures healthy and delicious meals for you and your loved ones... <span><a href="#">More.</a></span>
+                    </p>
+                </div>
+                <button type="button">coming <span>soon...</span></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h1>Informations</h1>
+                    <ul>
+                        <li><a href="pg_error.html">Pricing</a></li>
+                        <li><a href="pg_error.html">FAQ</a></li>
+                        <li><a href="pg_error.html">Sponsors</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h1>Contact Us</h1>
+                    <ul>
+                        <li><a href="pg_error.html"><i class="fa-brands fa-facebook" style="color: #3e74d0;"></i>blumokinney</a></li>
+                        <li><a href="pg_error.html"><i class="fa-brands fa-google-plus" style="color: #c9263f;"></i>blumokinney@gmail.com</a></li>
+                        <li><a href="pg_error.html"><i class="fa-brands fa-instagram" style="color: #b84c28;"></i>@blumo_kinney1</a></li>
+                        <li><a href="pg_error.html"><i class="fa-brands fa-whatsapp" style="color: #3b9929;"></i>+2347025192459</a></li>
+                        <li><a href="pg_error.html"><i class="fa-brands fa-twitter" style="color: #417ce1;"></i>@blumokinney</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h1>Company</h1>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Terms of service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Security</a></li>
+                        </ul>
+                </div>
+                <div class="footer-col">
+                    <h1>Developer</h1>
+                    <ul>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Core API Reference</a></li>
+                        <li><a href="#">Zipper</a></li>
+                        <li><a href="#">Webhooks</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="sponsor-col">
+            <h1>Sponsors</h1>
+            <div class="sponsor">
+                <a href="#"><img src="{% static 'images/Access bank.png' %}" alt="Access"></a>
+                <a href="#"><img src="{% static 'images/Jumia.png' %}" alt="Jumia"></a>
+                <a href="#"><img src="{% static 'images/GTBank.png' %}" alt="GTBank"></a>
+                <a href="#"><img src="{% static 'images/UBA.png' %}" alt="UBA"></a>
+            </div>
+        </div>
+        <div class="last-text">
+            <p><small>&copy; Copyright 2018 BlumoKinney.com. All rights reserved.</small></p>
+        </div>
+   </footer>
+   <script src="waitingPage.js"></script>
 </body>
 </html>
