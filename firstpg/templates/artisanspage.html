@@ -39,7 +39,7 @@
                 </ul>
                 </div>  
                 
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="{% url "waitinglist:contactus" %}">Contact</a></li>
             </div>
             </ul>
         </nav>
@@ -126,7 +126,7 @@
                 
                   
                   <p>
-                    <label for="id_services">Services:</label><br>
+                    <label for="id_services">Service(s) Rendered:</label><br>
                     <select name="services" required id="id_services">
                   <option value="" selected>---------</option>
                 
@@ -143,7 +143,7 @@
                 
                   
                   <p>
-                    <label for="id_skills">Skills:</label><br>
+                    <label for="id_skills">Specific Skill(s):</label><br>
                     <select name="skills" required id="id_skills">
                   <option value="" selected>---------</option>
                 
@@ -160,7 +160,7 @@
                 
                   
                   <p>
-                    <label for="id_unlisted_skill">Unlisted skill:</label><br>
+                    <label for="id_unlisted_skill">If your specific skill was not listed, kindly specify here:</label><br>
                     <input type="text" name="unlisted_skill" maxlength="225" required id="id_unlisted_skill">
                     
                     
@@ -168,7 +168,7 @@
                 
                   
                   <p>
-                    <label for="id_phone_number">Phone number:</label><br>
+                    <label for="id_phone_number">Phone number (WhatsApp preferred) (+23480XXXXXXXX):</label><br>
                     <input type="tel" name="phone_number" maxlength="14" placeholder="+2348000000000" required id="id_phone_number">
                     
                     
@@ -184,7 +184,7 @@
                 
                   
                   <p>
-                    <label for="id_landmark">Landmark:</label><br>
+                    <label for="id_landmark">Landmark axis (Nearest bus stop to your house):</label><br>
                     <input type="text" name="landmark" maxlength="25" required id="id_landmark">
                     
                     
@@ -192,8 +192,9 @@
                 
                   
                   <p>
-                    <label for="id_prefered_location">Prefered location:</label><br>
+                    <label for="id_prefered_location">Prefered location to work. (State below):</label><br>
                     <input type="text" name="prefered_location" maxlength="225" required id="id_prefered_location">
+                    
                     
                     
                   </p>
@@ -202,13 +203,15 @@
                   <p>
                     <label for="id_guarantor_fullname">Guarantor fullname:</label><br>
                     <input type="text" name="guarantor_fullname" maxlength="225" required id="id_guarantor_fullname">
+                    <p><span>NOTE</span>: guarantor must be a public service officer
+                        with a good pay e.g. (Pastor, civil servant, people with white collar jobs)</p>
                     
                     
                   </p>
                 
                   
                   <p>
-                    <label for="id_guarantor_phone_number">Guarantor phone number:</label><br>
+                    <label for="id_guarantor_phone_number">Guarantor phone number (+23480XXXXXXXX):</label><br>
                     <input type="tel" name="guarantor_phone_number" maxlength="14" placeholder="+2348000000000" required id="id_guarantor_phone_number">
                     
                     
@@ -216,7 +219,7 @@
                 
                   
                   <p>
-                    <label for="id_artisan_passport">Artisan passport:</label><br>
+                    <label for="id_artisan_passport">Please upload a passport photograph of yourself:</label><br>
                     <input type="file" name="artisan_passport" accept="image/*" required id="id_artisan_passport">
                     
                     
@@ -224,7 +227,7 @@
                 
                   
                   <p>
-                    <label for="id_guarantor_passport">Guarantor passport:</label><br>
+                    <label for="id_guarantor_passport">Please upload a passport photograph of guarantor:</label><br>
                     <input type="file" name="guarantor_passport" accept="image/*" required id="id_guarantor_passport">
                     
                     
